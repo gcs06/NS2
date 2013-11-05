@@ -1,2 +1,2 @@
 # Network Simulator 
-Code and files on learning the use of NS2 
+Code and files on learning NS2 and TCL
