@@ -23,11 +23,14 @@ set n3 [$ns node]
 
 $ns duplex-link $n0 $n2 1Mb 10ms DropTail
 $ns duplex-link $n1 $n2 1Mb 10ms DropTail
-$ns duplex-link $n3 $n2 1Mb 10ms DropTail
+$ns duplex-link $n3 $n2 1Mb 10ms SFQ
 
 $ns duplex-link-op $n0 $n2 orient right-down
 $ns duplex-link-op $n1 $n2 orient right-up
 $ns duplex-link-op $n2 $n3 orient right
+
+# Monitoring the queue
+$ns duplex-link-op $n2 $n3 queuePos 0.5
 
 # Create a UDP agent and attach it to node n0
 set udp0 [new Agent/UDP]
