@@ -1,0 +1,13 @@
+{
+	"folders":
+	[
+		{
+			"path": "/home/david/Coding/NS"
+		}
+	],
+
+	"sublimeclang_options":
+	[
+		"-I${folder:${project_path:ns2.sublime-project}}/**"
+	]
+}
