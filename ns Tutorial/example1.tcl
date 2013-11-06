@@ -1,13 +1,13 @@
 set ns [new Simulator]
 
-set nf [open out.nam w]
+set nf [open example1.nam w]
 $ns namtrace-all $nf
 
 proc finish {} {
 	global ns nf
 	$ns flush-trace
 	close $nf
-	exec nam out.nam &
+	exec nam example1.nam &
 	exit 0
 }
 

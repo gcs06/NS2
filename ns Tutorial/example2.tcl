@@ -5,14 +5,14 @@ set ns [new Simulator]
 $ns color 1 Blue
 $ns color 2 Red
 
-set nf [open out.nam w]
+set nf [open example2.nam w]
 $ns namtrace-all $nf
 
 proc finish {} {
 	global ns nf
 	$ns flush-trace
 	close $nf
-	exec nam out.nam &
+	exec nam example2.nam &
 	exit 0
 }
 
