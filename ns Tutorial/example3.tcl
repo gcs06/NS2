@@ -6,6 +6,8 @@ $ns rtproto DV
 set nf [open example3.nam w]
 $ns namtrace-all $nf
 
+set script DropTail
+
 proc finish {} {
 	global ns nf
 	$ns flush-trace
@@ -19,7 +21,7 @@ for {set i 0} {$i < 7} {incr i} {
 }
 
 for {set i 0} {$i < 7} {incr i} {
-	$ns duplex-link $n($i) $n([expr ($i+1)%7]) 1Mb 10ms DropTail
+	$ns duplex-link $n($i) $n([expr ($i+1)%7]) 1Mb 10ms $script
 }
 
 # Create a UDP agent and attach it to node n(0)
